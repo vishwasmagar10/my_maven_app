@@ -3,13 +3,13 @@ pipeline {
 	
 	environment {
 		DOCKERHUB_CRED=credentials('dockerhub')
-		IMAGE_NAME="<docker_hub_username>/<docker_hub_repo_name>"
+		IMAGE_NAME="vishwasmagar10/my_maven_app"
 	}
 	
 	stages {
 		stage('checkout') {
 			steps {
-				git url:'<github_repo_ssh_url>', branch:'main'
+				git url:'git@github.com:vishwasmagar10/my_maven_app.git', branch:'main'
 			}
 		}
 
